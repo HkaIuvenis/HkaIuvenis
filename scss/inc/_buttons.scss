@@ -1,0 +1,85 @@
+button, .btn {
+    padding: 12px 22px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $extra-font;
+    font-weight: 400;
+    text-align: center;
+    min-width: 180px;
+    display: block;
+    width: fit-content;
+    border-radius: 13px;
+    transition: .4s ease;
+    &.primary-btn {
+        background-color: $color-primary;
+        color: $color-secondary;
+        border: 3px solid $color-primary;
+        span {
+            color: $color-secondary;
+            transition: .4s ease;
+        }
+        &:hover {
+            background-color: $color-tertiary;
+            border-color: $color-tertiary;
+        }
+    }
+    &.secondary-btn {
+        background-color: $color-secondary;
+        color: $color-primary;
+        border: 3px solid $color-secondary;
+        span {
+            color: $color-primary;
+        }
+        &:hover {
+            background-color: $color-primary;
+            color: $color-secondary;
+            border: 3px solid $color-primary;
+            span {
+                color: $color-secondary;
+            }
+        }
+    }
+}
+
+.readmore:not(.btn) {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: $extra-font;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: none;
+    background-color: $color-secondary;
+    color: $color-primary;
+    transition: .4s ease;
+    &:hover {
+        color: $color-secondary;
+        background-color: $color-primary;
+    }
+    min-width: unset;
+}
+
+input {
+    height: 60px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+input, textarea {
+    font-family: $heading-font;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    display: block;
+    font-size: 24px;
+    line-height: 36px;
+    border-radius: 13px;
+    border: 3px solid $color-primary;
+    color: $color-secondary;
+    resize: none;
+}
+
+textarea {
+    padding: 20px;
+    height: 230px;
+}

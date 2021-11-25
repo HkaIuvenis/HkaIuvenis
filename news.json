@@ -1,0 +1,28 @@
+{
+    "posts":[
+        {   
+            "id": 1,
+            "link":"images/slide-1.png",
+            "title":"Konstytucja",
+            "text": "Wczoraj odbyła się nasza hybrydowa zbiórka konstytucyjna! 😁 W tym samym miejscu gdzie cztery lata temu 🔥 Po raz czwarty i ostatni przewodniczącym kręgu został phm. Miłosz Pawlak 😅💪 To był ciężki rok, ale wspólnie uznaliśmy, że mimo wielu przeciwności losu był chyba jak na razie najbardziej udanym w naszej historii 😃 Przed nami sesja, chill-outowa zbiórka i przygotowania do jeszcze lepszego roku! Czuwaj!"
+        },
+        {
+            "id": 2,
+            "link":"images/ognisko-3.jpg",
+            "title":"Ognisko",
+            "text": "W zeszłym tygodniu spotkaliśmy się po raz pierwszy od wieeelu miesięcy na żywo w tak licznym gronie ❤ Kilka godzin spędzonych przy wspólnym ognisku (dziękujemy HSW Bryza Olsztyn 🙏☺️) na gotowaniu pysznego warzywnego leczo oraz śpiewaniu kilkudziesięciu harcerskich i nie harcerskich piosenek 👌 W naszym gronie oficjalnie powitaliśmy też trzech nowych, pełnoprawnych członków kręgu - Weronikę, Rafała oraz Dominika 💪 Gratulacje! Oby już tak zostało 🤞😊"
+        },
+        {
+            "id": 3,
+            "link":"images/akademicy.png",
+            "title":"Bo na początku trzeba zebrać Drużynę",
+            "text": "Cześć, czuwaj! Nasz wtorkowy nabór zakończył się sukcesem! 💪😁 Na zbiórkę przyszło 8 zupełnie nowych osób, a parę kolejnych zapowiedziało, że odwiedzi nas w najbliższym czasie ☺️ Nabór ten był jednocześnie chyba jak na razie najliczniejszą zbiórką 'Iuvenis', także mamy z czego się cieszyć! 👌 Co dalej? ➡️ Spotykamy się już we wtorek o godzinie 19:30 na zbiórce ponaborowej w DS119 - jeśli się wybieracie, to dajcie znać - poinstruujemy, jak do nas trafić ✌️  Będą gitary, planszówki i wyborowe towarzystwo!"
+        },
+        {
+            "id": 4,
+            "link":"images/kajaki-2.jpg",
+            "title":"Przyjdzie Rozstań Czas",
+            "text": "A tak minęła nam ostatnia zbiórka w tym semestrze 😁🌅 Fajnie, co nie? A to wszystko dzięki naszemu Romanowi i Decathlon Olsztyn 💪🤩 Widzimy się w październiku!"
+        }
+    ]
+}

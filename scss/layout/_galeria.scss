@@ -1,0 +1,89 @@
+.galeria {
+    padding: 80px 20px;
+    @include tablet {
+        padding: 60px 20px;
+    }
+    @include mobile {
+        padding: 40px 20px;
+    }
+    .container {
+        .row {
+            .col-12 {
+                &.grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    @include tablet {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                    @include mobile {
+                        grid-template-columns: 1fr;
+                    }
+                    // grid-template-rows: 1fr 1fr 1fr;
+                    gap: 40px;
+                    a {
+                        display: block;
+                        line-height: 1;
+                        font-size: 1px;
+                        opacity: 0;
+                        top: -40%;
+                        overflow: hidden;
+                        position: relative;
+                        animation: show .4s ease-in-out forwards;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: .4s ease;
+                            transform: scale(1);
+                        }
+                        &::after {
+                            content: "";
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            width: 100%;
+                            position: absolute;
+                            background-color: rgba(#000, .6);
+                            transition: 1s ease;
+                        }
+                        &:hover {
+                            &::after {
+                                background-color: rgba(#000, 0);
+                            }
+                            img {
+                                transform: scale(1.15);
+                            }
+                        }
+                    }
+                }
+            }
+            .load-more {
+                margin-top: 80px;
+                @include tablet {
+                    margin-top: 60px;
+                }
+                @include mobile {
+                    margin-top: 40px;
+                }
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+        top: -40%;
+    }
+    50% {
+        opacity: 0;
+        top: -40%;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}

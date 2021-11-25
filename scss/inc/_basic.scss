@@ -1,0 +1,135 @@
+body {
+    font-family: $body-font;
+}
+html, p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+html {
+    overflow-x: hidden;
+    &.hide {
+        overflow: hidden;
+    }
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+h1,h2,h3,h4 {
+    font-family: $heading-font;
+    font-weight: bold;
+    cursor: text;
+}
+
+.white {
+    color: #fff;
+    a {
+        color: #fff;
+    }
+}
+
+.messageSended {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/galeria.jpg");
+    background-size: cover;
+    background-position: center;
+    h1 {
+        color: #fff;
+        margin-bottom: 30px;
+    }
+}
+
+a {
+    cursor: pointer !important;
+    & > * {
+        cursor: pointer !important;
+    }
+}
+
+h4 {
+    font-weight: 400;
+}
+
+h1, .h1 {
+    font-size: 52px;
+    line-height: 64px;
+    a {
+        text-decoration: underline;
+    }
+    @include tablet {
+        font-size: 42px;
+        line-height: 52px;
+    }
+    @include mobile {
+        font-size: 36px;
+        line-height: 48px;
+    }
+}
+
+h2, .h2 {
+    font-size: 42px;
+    line-height: 64px;
+    @include tablet {
+        font-size: 36px;
+        line-height: 48px;
+    }
+}
+
+.separator {
+    width: calc(100% + 30px);
+    height: 1px;
+    margin: 8px -15px 20px;
+    &--tertiary {
+        background-color: $color-tertiary;
+    }
+    &--primary {
+        background-color: $color-primary;
+    }
+}
+
+h3, .h3 {
+    font-size: 36px;
+    line-height: 48px;
+    @include tablet {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+// .container {
+//     @include desktop {
+//         max-width: 1440px;
+//     }
+// }
+
+.primary {
+    color: $color-primary;
+}
+.tertiary {
+    color: $color-tertiary;
+}
+
+.small-heading {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $heading-font;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.dark {
+    background-color: #030A22;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}

@@ -1,0 +1,19 @@
+//Include
+
+    @import "./inc/mixins";
+    @import "./inc/variables";
+    @import "./inc/basic";
+    @import "./inc/buttons";
+//Bootstrap
+
+    @import "./bootstrap_grid/bootstrap-grid";
+
+    
+//Layout
+
+    @import "./layout/banner";
+    @import "./layout/footer";
+    @import "./layout/header";
+    @import "./layout/home";
+    @import "./layout/galeria";
+    @import "./layout/news";

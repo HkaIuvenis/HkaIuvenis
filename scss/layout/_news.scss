@@ -1,0 +1,168 @@
+.news {
+    padding: 80px 20px 60px;
+    @include tablet {
+        padding: 60px 20p 40px;
+    }
+    @include mobile {
+        padding: 40px 20px 20px;
+    }
+    & > .container {
+        & > .row {
+            .col-12 {
+                &.grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    @include tablet {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                    @include mobile {
+                        grid-template-columns: 1fr;
+                    }
+                    gap: 40px;
+                    & > .grid-image {
+                        position: relative;
+                        opacity: 0;
+                        animation: show .4s ease-in-out forwards;
+                        & > .image {
+                            img {
+                                height: 150px;
+                                width: 100%;
+                                object-fit: cover;
+                                border-radius: 16px;
+                            }
+                        }
+                        & > .content {
+                            padding: 20px;
+                            .readmore {
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            .load-more {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.news-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#000, .6);
+    z-index: 999;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    animation: hide .4s ease-in-out forwards;
+    &.active {
+        animation-name: showModal;
+        display: flex;
+    }
+    &.hide {
+        animation: none;
+        display: none;
+    }
+    .container {
+        background-color: #fff;
+        position: relative;
+        .close {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: 20px;
+            cursor: pointer;
+            right: 20px;
+        }
+        @media all and (min-width: 1400px) {
+            max-width: 1360px;
+        }
+        .row {
+            align-items: center;
+            margin: 0;
+            @media all and (min-width: 993px) {
+                min-height: 500px;
+                max-height: 500px;
+            }
+        }
+        .col-md-6 {
+            position: static;
+            img {
+                width: 100%;
+            }
+            &:first-child {
+                padding-left: 0;
+            }
+            &.content {
+                padding: 40px;
+                h3 {
+                    margin-bottom: 20px;
+                }
+            }
+            @include tablet {
+                position: relative;
+                &:first-child {
+                    padding-right: 0;
+                }
+                &.content {
+                    max-height: 300px;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+        top: -40%;
+    }
+    50% {
+        opacity: 0;
+        top: -40%;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+@keyframes showModal {
+    0%{
+        opacity: 0;
+        left: 0;
+        display: none;
+    }
+    1% {
+        opacity: 0;
+        display: flex;
+    }
+    100% {
+        opacity: 1;
+        display: flex;
+    }
+}
+@keyframes hide {
+    0%{
+        opacity: 1;
+        display: flex;
+    }
+    99% {
+        opacity: 0;
+        display: flex;
+        left: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        left: -100%;
+    }
+}
