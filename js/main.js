@@ -1,4 +1,9 @@
-
+window.addEventListener("load", () => {
+    document.querySelector("html").classList.add("loaded");
+    setTimeout(() => {
+        document.querySelector(".loading").style.display = "none";
+    },1050)
+})
 //POST LOADING
 if(document.body.classList.contains("home")) {
     var jqxhr = $.getJSON( "news.json", function(e) {
