@@ -13,13 +13,22 @@ html {
     }
     &.loaded {
         .loading {
-            opacity: 0 !important;
+            animation: hideLoad 1s ease forwards;
         }
     }
     &.hide {
         overflow: hidden;
     }
 }
+
+@keyframes hideLoad {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
 
 .loading {
         background: #5f6171;
@@ -29,8 +38,6 @@ html {
         right: 0;
         bottom: 0;
         z-index: 999;
-        opacity: 1;
-        transition: 1s;
         &::after,
         &::before {
             display: block;
