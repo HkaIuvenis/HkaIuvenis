@@ -7,7 +7,6 @@ window.addEventListener("load", () => {
 //POST LOADING
 if(document.body.classList.contains("home")) {
     var jqxhr = $.getJSON( "news.json", function(e) {
-        console.log(e);
         const homeS = document.querySelector(".banner-slider .swiper-wrapper");
         const posts = [... e.posts];
         for(let i=0; i <= 3; i++) {
@@ -249,35 +248,38 @@ if(newsPage) {
 }
 window.addEventListener('load', () => {
     const readmores = document.querySelectorAll(".readmore");
-    
-    if(readmores[0]) {
-        readmores.forEach(btn => {
-            btn.addEventListener("click", () => {
-                const gridImage = btn.closest(".modal-id");
-                const id = $(gridImage).data("post-id");
-                const modal = document.querySelector(`.news-modal[data-post-id="${id}"]`);
-                modal.classList.add("active");
-                modal.classList.remove("hide");
-                document.querySelector("html").classList.add("hide");
+    const searchElement = setInterval(() => {
+        if(readmores[0]) {
+            readmores.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const gridImage = btn.closest(".modal-id");
+                    const id = $(gridImage).data("post-id");
+                    const modal = document.querySelector(`.news-modal[data-post-id="${id}"]`);
+                    modal.classList.add("active");
+                    modal.classList.remove("hide");
+                    document.querySelector("html").classList.add("hide");
+                })
             })
-        })
-        const modals = document.querySelectorAll(".news-modal");
-        modals.forEach(modal => {
-            modal.addEventListener("click", (e) => {
-                if(e.target.classList.contains("news-modal")) {
-                    modal.classList.remove("active");
+            const modals = document.querySelectorAll(".news-modal");
+            modals.forEach(modal => {
+                modal.addEventListener("click", (e) => {
+                    if(e.target.classList.contains("news-modal")) {
+                        modal.classList.remove("active");
+                        document.querySelector("html").classList.remove("hide");
+                    }
+                })
+            })
+            const closes = document.querySelectorAll(".news-modal .close");
+            closes.forEach(close => {
+                close.addEventListener("click", () => {
+                    close.closest(".news-modal").classList.remove("active");
                     document.querySelector("html").classList.remove("hide");
-                }
+                })
             })
-        })
-        const closes = document.querySelectorAll(".news-modal .close");
-        closes.forEach(close => {
-            close.addEventListener("click", () => {
-                close.closest(".news-modal").classList.remove("active");
-                document.querySelector("html").classList.remove("hide");
-            })
-        })
-    }
+            clearInterval(searchElement);
+        }
+        
+    }, 1000);
 })
 
 
