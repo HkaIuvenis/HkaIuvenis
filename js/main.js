@@ -247,8 +247,8 @@ if(newsPage) {
 
 }
 window.addEventListener('load', () => {
-    const readmores = document.querySelectorAll(".readmore");
     const searchElement = setInterval(() => {
+        let readmores = document.querySelectorAll(".readmore");
         if(readmores[0]) {
             readmores.forEach(btn => {
                 btn.addEventListener("click", () => {
